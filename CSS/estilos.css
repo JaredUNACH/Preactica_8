@@ -23,6 +23,16 @@ body {
     width: 100px; 
     height: auto; 
 }
+.animated-link {
+    transition: transform 0.3s ease-in-out; /* Añade una transición suave al efecto de escala */
+}
+
+.animated-link:hover {
+    transform: scale(1.1) rotate(5deg); /* Escala el elemento al 110% y lo rota 5 grados al pasar el cursor */
+}
+.nav-link.active.animated-link {
+    background: none;
+}
 .navbar.bg-body-tertiary {
     background-color: #05123a !important;
 }
@@ -110,4 +120,32 @@ footer {
 .perfil {
     border: 3px solid #263d56;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+@media (min-width: 992px) { 
+    .animated-link {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .animated-link:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+.responsive-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-article > aside {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) { /* Ajusta este valor según tus necesidades */
+    .responsive-article {
+        flex-direction: row;
+    }
+    .responsive-article > aside {
+        width: auto;
+        text-align: left;
+    }
 }
