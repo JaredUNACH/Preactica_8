@@ -140,7 +140,7 @@ footer {
     text-align: center;
 }
 
-@media (min-width: 768px) { /* Ajusta este valor según tus necesidades */
+@media (min-width: 768px) { 
     .responsive-article {
         flex-direction: row;
     }
